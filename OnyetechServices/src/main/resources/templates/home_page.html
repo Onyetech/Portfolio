@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<!-- Title -->
+		<title>TalkPi -Pi Ecosystem Application</title>
+
+		<!-- Meta Tags -->
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <!-- SEO Meta description -->
+		<meta name="description"
+		    content="TalkPi - Pi cryptocurrency ecosystem web application">
+		<meta name="author" content="Codeonec">
+
+		<!-- OG Meta Tags to improve the URL looks when you share the link on LinkedIn, Facebook, Google+ -->
+	    <meta property="og:site_name" content=""/> <!-- website name -->
+	    <meta property="og:site" content=""/> <!-- website link -->
+	    <meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	    <meta property="og:description" content=""/> <!-- description shown in the actual shared post -->
+	    <meta property="og:image" content=""/> <!-- image link, make sure it's jpg -->
+	    <meta property="og:url" content=""/> <!-- where do you want your post to link to -->
+	    <meta property="og:type" content="article"/>
+
+	    <!-- Favicon Icon-->
+		<link rel="icon" href="assets/images/.Onye tech favicon.png" type="image/png" sizes="16x16">
+
+	    <!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<!-- Main Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+		<!-- Added Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="assets/css/added.css">
+		<!-- Owl Carousel CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css">
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+		<!-- Font-awesome CSS -->
+		<link href="assets/css/all.min.css" rel="stylesheet">
+	</head>
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+		<!--Start Preloader-->
+		<div id="pre_loader">
+			<div class="pre_cnt d-flex flex-wrap flex-row align-items-center">
+				<span class="pre_spn">
+					<span class="spinner-grow text-primary" role="status">	
+					</span>
+				</span>
+			</div>
+		</div>
+		<!--End Preloader-->
+
+		<!--Start Navbar-->
+			<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+				<div class="container">
+					<!--Logo-->
+					<a class="navbar-brand" href="home_page.html"><img src="assets/images/Onyetechlogo.png" height="40" alt="logo">TalkPi</a>
+
+					<!--Mobile Toggle Button-->
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				   	 	<i class="fas fa-bars"></i>
+				    </button>
+
+				    <!--Links-->
+				  	<div class="collapse navbar-collapse" id="navbarNav">
+					    <ul class="navbar-nav ml-auto">
+						    <li class="nav-item">
+								<a th:href="@{/}" class="nav-link">Home</a>
+						    </li>
+						    <li class="nav-item">
+						       	<a class="nav-link" href="#services">Services</a>
+						    </li>
+						    <li class="nav-item">
+						       	<a class="nav-link" th:href="@{/blog}">Blogs</a>
+						    </li>
+						    <li class="nav-item">
+						       	<a class="nav-link" href="#contact">Contact us</a>
+						    </li>
+							<li class="nav-item">
+								<a th:href="@{/login}" class="nav-link">Log In</a>
+
+						 </li>
+						 <div class="sign-up-div">
+						 <li class="nav-item" id="sign-up-border">
+							 <a th:href="@{/signup}" id="sign-up" class="nav-link">Sign Up</a>
+
+					 	</li>
+						</div>
+					    </ul>
+						<div class="search-box" style="border-radius: 3em; ">
+							<button class="btn-search"><i class="fas fa-search"></i></button>
+							<input type="text" class="input-search" placeholder="Type to Search...">
+						</div>
+
+				    </div>
+				</div>
+			</nav>
+		<!--End Navbar-->
+
+		<!--Start Content-->
+
+		<!--Start cover-->
+		<section id="cover">
+			<div class="container cvr_cnt">
+				<div class="row cvr_row">
+					<div  class="col-lg-6 cvr-ttl align-self-center"  >
+				<!--     	<h5>Welcome,</h5>   -->
+						<p class="cvr-title">We <span class="cvr-title-tp">Talk Pi Network</span></p>
+						<p class="cvr-body" style="text-align:justify">TalkPi evolved through Pi Hackathon, endorsed by the Pi community to serve the use of Pi Ecosystem app. 
+							Pi is a Secure, Immutable, non-counterfeitable and interoperable digital money. TalkPi allows Pioneers to share information and interact through blogs,
+						buy and sell Pi coin, and receive Pi tips, as its main services to enhance the growth of Pi ecosystem. </p>
+						<div class="row cvr-btns d-flex flex-row flex-wrap align-items-center">
+							<a href="#" class="button_main btn mb-3">1 Pi = $ 102&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-right arrow_go"></i></a>
+							<a href="#" class="btn gs-btn mb-3 ml-3"><i class="fas fa-play srr"></i>&nbsp;&nbsp;<span class="gs-txt">Watch How TalkPi Works</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 d-flex p-2 justify-content-between cvr-ftr align-items-center flex-wrap">
+						<div class="p-2 ftr-pr d-flex flex-row justify-content-between" >
+							<a href="#services" style="color: black; font-weight: bold;">Our services</a>&nbsp;&nbsp;&nbsp;
+							<a href="#contact" style="color: black; font-weight: bold;">Contact us</a>
+						</div>
+						<div class="p-2 ftr-sc d-flex flex-row justify-content-between">
+							<!-- <a href="#" class=""><i class="fab fa-twitter"></i></a> -->
+							
+							<a href="https://www.facebook.com/PiCoreTeam/" target="_blank" class="ml-2" ><i class="fab fa-facebook-f"></i></a>
+							<a href="https://www.instagram.com/pi_network/" target="_blank" class="ml-2"><i class="fab fa-instagram"></i></a>
+							<a href="https://www.linkedin.com/company/pi-net/" target="_blank" class="ml-2"><i class="fab fa-linkedin"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--End Cover-->
+
+		<!--Start Vision Mission Value-->
+		<section id="vmv">
+			<div class="container">
+					<div class="row row_vmv"  >
+						<div class="col-lg-4 vmv">
+							<div class="vmv_cnt">
+								<div class="p-2"><h6><i class="fas fa-bookmark"></i>&nbsp;&nbsp;Vision</h6></div>
+								<div class="p-2" style="text-align:justify">To be a fulcrum to Pi secure, immutable, non-counterfeitable and interoperable digital money.</div>
+							</div>
+						</div>
+						<div class="col-lg-4 vmv">
+							<div class="vmv_cnt">
+								<div class="p-2"><h6><i class="fas fa-chart-line"></i>&nbsp;&nbsp;Mission</h6></div>
+								<div class="p-2" style="text-align:justify"> Creating a part and parcel of Pi big ecosystem where Pioneers can trust and call their own.</div>
+							</div>
+						</div>
+						<div class="col-lg-4 vmv">
+							<div class="vmv_cnt">
+								<div class="p-2"><h6><i class="fas fa-chart-pie"></i>&nbsp;&nbsp;Value</h6></div>
+								<div class="p-2" style="text-align:justify"> We got experienced Pioneers, developers and crypto experts who understands blockchain</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</section>
+		<!--End Vision Mission Value-->
+
+		<!--Start About-->
+
+		<!--Start Introduction-->
+		<section id="introduction">
+			<div class="container">
+				<div class="row justify-content-center icont">
+					<div class="col-lg-6 col-md-12 in_img align-self-center">
+						<img src="assets/images/about/about.jpg" class="img-fluid"   alt="in_img">
+					</div>
+					<div class="col-lg-6 col-md-12 align-items-center">
+							<!-- <span class="sub_head">Our Achievements</span> -->
+							<h2 class="s_head">Quick Updates</h2>
+	     					<p class="h_body">
+	     						<b>Note:</b> every initiated transactions completes in maximum of 30 minutes in case of large volume of requests.
+								Typically it is within five minutes. 
+	     					</p>
+	     				<div class="row">
+							<div class="icard col-sm-6">
+								<div class="card c1">
+									<div class="d-flex flex-row align-items-center h-100 crd_cnt"  >
+										<div class="p-2">
+											<div class="card-title"><i class="fas fa-globe-asia"></i></div>
+										</div>
+										<div class="crd_bdy">
+					    					<p class="card-text">30m Pi coin holders!</p>
+					    				</div>
+					    			</div>
+			  					</div>
+							</div>
+			    			<div class="icard col-sm-6">
+								<div class="card c2">
+				  				  	<div class="d-flex flex-row align-items-center h-100 crd_cnt"  >
+										<div class="p-2">
+											<div class="card-title"><i class="fas fa-server"></i></div>
+										</div>
+										<div class="crd_bdy">
+					    					<p class="card-text">$25m TV in 24hr.</p>
+					    				</div>
+					    			</div>
+			  					</div>
+							</div>
+							<div class="icard col-sm-6">
+								<div class="card c3">
+									<div class="d-flex flex-row align-items-center h-100 crd_cnt"  >
+										<div class="p-2">
+											<div class="card-title"><i class="fas fa-shield-alt"></i></div>
+										</div>
+										<div class="crd_bdy">
+					    					<p class="card-text">53k new Pi holders.</p>
+					    				</div>
+					    			</div>
+			  					</div>
+							</div>
+							<div class="icard col-sm-6">
+								<div class="card c4">
+				  				  	<div class="d-flex flex-row align-items-center h-100 crd_cnt"  >
+										<div class="p-2">
+											<div class="card-title"><i class="far fa-chart-bar"></i></div>
+										</div>
+										<div class="crd_bdy">
+					    					<p class="card-text">45% G in 24 hours.</p>
+					    				</div>
+					    			</div>
+			  					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</section>
+		<!--End Introduction-->
+ 	
+		<!--Start Brand area-->
+		<!-- <div id="brand-area">
+			<div class="container">
+				<div class="row brcnt">
+					<div class="col-lg-2 col-md-4 col-sm-4 col-6 brnd_img">
+						<div class="brnd">	
+							<img src="assets/images/partners/br1.png" class="img-fluid" alt="brand">
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 col-sm-4 col-6 brnd_img">
+						<div class="brnd">	
+							<img src="assets/images/partners/br2.png" class="img-fluid" alt="brand">
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 col-sm-4 col-6 brnd_img">
+						<div class="brnd">	
+							<img src="assets/images/partners/br3.png" class="img-fluid" alt="brand">
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 col-sm-4 col-6 brnd_img">
+						<div class="brnd">	
+							<img src="assets/images/partners/br4.png" class="img-fluid" alt="brand">
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 col-sm-4 col-6 brnd_img">
+						<div class="brnd">	
+							<img src="assets/images/partners/br5.png" class="img-fluid" alt="brand">
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 col-sm-4 col-6 brnd_img">
+						<div class="brnd">	
+							<img src="assets/images/partners/br6.png" class="img-fluid" alt="brand">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<!--End Brand Area-->
+
+		<!--Start Counter Section-->
+		<section id="counter_up">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-xs-6 text-center cocnt">
+						<h3><span class="count counter" data-count="3560">0</span><span class="count_txt">+</span></h3>
+						<span class="count_bdy">Purchase Requests</span>
+					</div>
+					<div class="col-lg-3 col-md-3 col-xs-6 text-center cocnt">
+						<h3><span class="count_txt"><!--US$--></span><span class="count counter" data-count="1260">0</span><span class="count_txt">+</span></h3>
+						<span class="count_bdy">Sell Requests</span>
+					</div>
+					<div class="col-lg-3 col-md-3 col-xs-6 text-center cocnt">
+						<h3><span class="count counter" data-count="53">0</span><span class="count_txt">+</span></h3>
+						<span class="count_bdy">Expert Advice</span>
+					</div>
+					<div class="col-lg-3 col-md-3 col-xs-6 text-center cocnt">
+						<h3><span class="count counter" data-count="1031">0</span><span class="count_txt">+</span></h3>
+						<span class="count_bdy">Blog Posts</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--End Counter Section-->
+
+		<!--End About-->
+
+		<!--Start Team Secr=tion-->
+		<!-- <section id="team">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-12 cnt_head">
+						<span class="sub_head">Specialists behind great work</span>
+						<h2 class="s_head">Meet our Team</h2>
+						<p class="h_body">We have highly skilled professionals conveniently customizing services for incredible results.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row team_cnt">
+					<div class="col-lg-3 col-md-6 col-sm-6 team_crd">
+						<div class="card">
+							<div class="team_img_cnt">
+								<img src="assets/images/team/team1.jpg" class="img-fluid rounded-circle mx-auto mb-3" height="400" width="400" alt="member">
+								<div class="m_sci">
+									<div class="d-flex justify-content-around align-items-center h-100">
+										<a href="#" class="p-2"><i class="fab fa-twitter"></i></a>
+										<a href="#" class="p-2"><i class="fab fa-facebook-f"></i></a>
+										<a href="#" class="p-2"><i class="fab fa-instagram"></i></a>
+										<a href="#" class="p-2"><i class="fab fa-dribbble"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="m_name text-center">Jake Knight</div>
+							<div class="m_dsc text-center">Web Developer</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 team_crd">
+						<div class="card">
+							<div class="team_img_cnt">
+								<img src="assets/images/team/team2.jpg" class="img-fluid rounded-circle mx-auto mb-3" height="400" width="400" alt="member">
+								<div class="m_sci">
+									<div class="d-flex justify-content-around align-items-center h-100">
+										<a href="#" class="p-2"><i class="fab fa-twitter"></i></a>
+										<a href="#" class="p-2"><i class="fab fa-facebook-f"></i></a>
+										<a href="#" class="p-2"><i class="fab fa-instagram"></i></a>
+										<a href="#" class="p-2"><i class="fab fa-dribbble"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="m_name text-center">Minea Tushera</div>
+							<div class="m_dsc text-center">UI/UX Designer</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 team_crd">
+						<div class="card">
+							<div class="team_img_cnt">
+								<img src="assets/images/team/team3.jpg" class="img-fluid rounded-circle mx-auto mb-3" height="400" width="400" alt="member">
+								<div class="m_sci">
+									<div class="d-flex justify-content-around align-items-center h-100">
+										<a href="#" class="p-2"><i class="fab fa-twitter"></i></a>
+										<a href="#" class="p-2"><i class="fab fa-facebook-f"></i></a>
+										<a href="#" class="p-2"><i class="fab fa-instagram"></i></a>
+										<a href="#" class="p-2"><i class="fab fa-dribbble"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="m_name text-center">Shanken Taylor</div>
+							<div class="m_dsc text-center">AI Developer</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 team_crd">
+						<div class="card">
+							<div class="team_img_cnt">
+								<img src="assets/images/team/team4.jpg" class="img-fluid rounded-circle mx-auto mb-3" height="400" width="400" alt="member">
+								<div class="m_sci">
+									<div class="d-flex justify-content-around align-items-center h-100">
+										<a href="#" class="p-2"><i class="fab fa-twitter"></i></a>
+										<a href="#" class="p-2"><i class="fab fa-facebook-f"></i></a>
+										<a href="#" class="p-2"><i class="fab fa-instagram"></i></a>
+										<a href="#" class="p-2"><i class="fab fa-dribbble"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="m_name text-center">Shreeram Jha</div>
+							<div class="m_dsc text-center">Software Administrator</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<!--End Team Section-->
+
+		<!--Start Services Section-->
+		<section id="services">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-12 cnt_head"  >
+						<span class="sub_head">We are the best at these 3</span>
+						<h2 class="s_head">Our Services</h2>
+						<p class="h_body">Our proven experience make us best at the featured services. We provide these services for a great Pioneer's experience. </p>
+					</div>
+				</div>
+				<div class="row ser_cnt">
+					<div class="col-lg-4 col-md-12 col-xs-12 serv">
+						<div class="card">
+							<span class="ser_ico"><i class="fas fa-file-invoice-dollar"></i></span>
+							<span class="ser_ttl">Buy Pi</span>
+							<p class="ser_dsc card-text">We sell at the rate of <b>$ 120</b> per Pi. By continuing you will be able to make payment 
+								on the next page and have the equivalent amount of Pi wired to your supplied Pi crypto account wallet in the next minute.</p>
+							<a href="service_single.html" class="ser_lnk">Continue&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12 col-xs-12 serv">
+						<div class="card">
+							<span class="ser_ico"><i class="fas fa-chart-line"></i></span>								
+							<span class="ser_ttl">Sell Pi</span>
+							<p class="ser_dsc card-text">We buy at the rate of <b>$ 116</b> per Pi. By continuing you will be able to transfer your Pi to our 
+								official Pi account wallet while you provide your payoneer account for your dollar deposit.</p>
+							<a href="service_single.html" class="ser_lnk">Continue&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12 col-xs-12 serv">
+						<div class="card">
+							<span class="ser_ico"><i class="far fa-edit"></i></span>
+							<span class="ser_ttl">Tips</span>
+							<p class="ser_dsc card-text">On demand, TalkPi experts provides you with advice on Pi cryptocurrency investment tips you 
+								need to know from time to time. This is one of the ways we help to grow the Pi ecosystem.
+							</p>
+							<a href="#" class="ser_lnk">Continue&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
+						</div>
+					</div>
+
+					<!-- <div class="col-lg-4 col-md-12 col-xs-12 serv">
+						<div class="card">
+							<span class="ser_ico"><i class="fas fa-file-invoice-dollar"></i></span>
+							<span class="ser_ttl">SEO Optimization</span>
+							<p class="ser_dsc card-text">We anchor successful website search engine optimization, online ad of any type and email marketing.</p>
+							<a href="service_single.html" class="ser_lnk">Know More&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12 col-xs-12 serv">
+						<div class="card">
+							<span class="ser_ico"><i class="far fa-file-alt"></i></span>
+							<span class="ser_ttl">Graphics Design</span>
+							<p class="ser_dsc card-text">OnyeTech creates you from scratch a professional and minimal graphic kinds from its own professional style.</p>
+							<a href="service_single.html" class="ser_lnk">Know More&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12 col-xs-12 serv">
+						<div class="card">
+							<span class="ser_ico"><i class="far fa-file-code"></i></span>
+							<span class="ser_ttl">Virtual Assistance</span>
+							<p class="ser_dsc card-text">We provide you with any type of administrative support like handling your customers and office work. </p>
+							<a href="service_single.html" class="ser_lnk">Know More&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</section>
+		<!--End Services Section-->
+
+		<!--Start Project Section-->
+		<section id="projects">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-12 cnt_head"  >
+						<span class="sub_head">Pioneers' Contents</span>
+						<h2 class="s_head">Pioneers' blogs</h2>
+						<p class="h_body">You will find the blog contents very interactive, educative, informative and interesting.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="owl-carousel owl-theme pr_cnt">
+							<div class="item" style="background:linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(assets/images/projects/p3.jpg); background-size: cover; background-position: center; width: 320px;">
+						    	<div class="pr_obj">
+						    		<div class="p-3 pr_main">
+						    			<div class="pr_subhead">AI/VR Project</div>
+						    			<div class="pr_head">Grade VR</div>	
+						    			<div class="pr_lnk"><a href="project_single.html" class="button_main">Case Study&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-right arrow_go"></i></a></div>						    		
+						    		</div>
+						    	</div>
+						    </div>
+							<div class="item" style="background:linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(assets/images/projects/p6.jpg); background-size: cover; background-position: center; width: 320px;">
+						    	<div class="pr_obj">
+						    		<div class="p-3 pr_main">
+						    			<div class="pr_subhead">Web Development</div>
+						    			<div class="pr_head">ExO Net</div>	
+						    			<div class="pr_lnk"><a href="project_single.html" class="button_main">Case Study&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-right arrow_go"></i></a></div>
+						    		</div>
+						    	</div>
+						    </div>
+						    <div class="item" style="background:linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(assets/images/projects/p1.jpg); background-size: cover; background-position: center; width: 320px;">
+						    	<div class="pr_obj">
+						    		<div class="p-3 pr_main">
+						    			<div class="pr_subhead">Gaming & Utility</div>
+						    			<div class="pr_head">BaseXamp</div>
+						    			<div class="pr_lnk"><a href="project_single.html" class="button_main">Case Study&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-right arrow_go"></i></a></div>
+						    		</div>
+						    	</div>
+						    </div>
+						    <div class="item" style="background:linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(assets/images/projects/p2.jpg); background-size: cover; background-position: center; width: 320px;">
+						    	<div class="pr_obj">
+						    		<div class="p-3 pr_main">
+						    			<div class="pr_subhead">Computing Research</div>
+						    			<div class="pr_head">Right Wireframes</div>
+						    			<div class="pr_lnk"><a href="project_single.html" class="button_main">Case Study&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-right arrow_go"></i></a></div>						    		
+						    		</div>
+						    	</div>
+						    </div>
+						    <div class="item" style="background:linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(assets/images/projects/p4.jpg); background-size: cover; background-position: center; width: 320px;">
+						    	<div class="pr_obj">
+						    		<div class="p-3 pr_main">
+						    			<div class="pr_subhead">AI Development</div>
+						    			<div class="pr_head">Dynamic Media</div>
+						    			<div class="pr_lnk"><a href="project_single.html" class="button_main">Case Study&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-right arrow_go"></i></a></div>						    		
+						    		</div>
+						    	</div>
+						    </div>
+						    <div class="item" style="background:linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(assets/images/projects/p5.jpg); background-size: cover; background-position: center; width: 320px;">
+						    	<div class="pr_obj">
+						    		<div class="p-3 pr_main">
+						    			<div class="pr_subhead">Python Project</div>
+						    			<div class="pr_head">Ultimate PY</div>	
+						    			<div class="pr_lnk"><a href="project_single.html" class="button_main">Case Study&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-right arrow_go"></i></a></div>
+						    		</div>
+						    	</div>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--End Project Section-->
+	
+		<!--Start Pricing Section-->
+		<!-- <section id="pricing">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-12 cnt_head"  >
+						<span class="sub_head">Pricing to fit your needs</span>
+						<h2 class="s_head">Pricing Plans</h2>
+						<p class="h_body">We have best pricing plans according to your requirements. We traget different audience and provide them true value for money plans.</p>
+					</div>
+				</div>
+				<div class="row pricing_container">
+					<div class="col-lg-3 col-md-6 col-sm-6 pricing_section">
+						<div class="card pricing_plan">
+							<h1 class="pl_head">Student</h1>
+							<div class="price">
+								<span class="pr1">$</span><span class="pr2">9</span>
+								<span class="pr3">/ month</span><br/>
+								<div class="pr4">Preferred by students.</div>
+							</div>
+							<div class="d-flex flex-column pl_ftr">
+								<div class="p-2 pl_ftr_hd">Top features:</div>
+								<div class="p-2 feature"><i class="fas fa-check-circle"></i>&nbsp;&nbsp;100GB</div>
+								<div class="p-2 feature"><i class="fas fa-check-circle"></i>&nbsp;&nbsp;10 Projects</div>
+								<div class="p-2 feature"><i class="fas fa-check-circle"></i>&nbsp;&nbsp;12/7 Support</div>
+							</div>
+							<a href="#" class="button_main">Buy Student</a>
+						</div>
+					</div>	
+					<div class="col-lg-3 col-md-6 col-sm-6 pricing_section">
+						<div class="card pricing_plan">
+							<h1 class="pl_head">Starter</h1>
+							<div class="price">
+								<span class="pr1">$</span><span class="pr2">19</span>
+								<span class="pr3">/ month</span><br/>
+								<div class="pr4">Preferred by startups.</div>
+							</div>
+							<div class="d-flex flex-column pl_ftr">
+								<div class="p-2 pl_ftr_hd">Top features:</div>
+								<div class="p-2 feature"><i class="fas fa-check-circle"></i>&nbsp;&nbsp;200GB</div>
+								<div class="p-2 feature"><i class="fas fa-check-circle"></i>&nbsp;&nbsp;16 Projects</div>
+								<div class="p-2 feature"><i class="fas fa-check-circle"></i>&nbsp;&nbsp;12/7 Support</div>
+							</div>
+							<a href="#" class="button_main">Buy Starter</a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 pricing_section">
+						<div class="card pricing_plan special">
+							<h1 class="pl_head">Business</h1>
+							<div class="price">
+								<span class="pr1">$</span><span class="pr2">39</span>
+								<span class="pr3">/ month</span><br/>
+								<div class="pr4">Preferred by businesses.</div>
+							</div>
+							<div class="d-flex flex-column pl_ftr">
+								<div class="p-2 pl_ftr_hd">Top features:</div>
+								<div class="p-2 feature"><i class="fas fa-check-circle"></i>&nbsp;&nbsp;1000GB</div>
+								<div class="p-2 feature"><i class="fas fa-check-circle"></i>&nbsp;&nbsp;50 Projects</div>
+								<div class="p-2 feature"><i class="fas fa-check-circle"></i>&nbsp;&nbsp;24/7 Support</div>
+							</div>
+							<a href="#" class="button_main">Buy Business</a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 pricing_section">
+						<div class="card pricing_plan">
+							<h1 class="pl_head">Premium</h1>
+							<div class="price">
+								<span class="pr1">$</span><span class="pr2">59</span>
+								<span class="pr3">/ month</span><br/>
+								<div class="pr4">Preffered by developers.</div>
+							</div>
+							<div class="d-flex flex-column pl_ftr">
+								<div class="p-2 pl_ftr_hd">Top features:</div>
+								<div class="p-2 feature"><i class="fas fa-check-circle"></i>&nbsp;&nbsp;1000GB</div>
+								<div class="p-2 feature"><i class="fas fa-check-circle"></i>&nbsp;&nbsp;100 Projects</div>
+								<div class="p-2 feature"><i class="fas fa-check-circle"></i>&nbsp;&nbsp;24/7 Support</div>
+							</div>
+							<a href="#" class="button_main">Buy Premium</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<!--End Pricing Section-->
+		
+		<!--Start News Section-->
+		<section id="news">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-12 cnt_head"   >
+						<!-- <span class="sub_head">Find out our thoughts</span> -->
+						<h2 class="s_head">Featured News</h2>
+						<!-- <p class="h_body">We have best pricing plans according to your requirements. We traget different audience and provide them true value for money plans.</p> -->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-sm-12 bl_sec mb-3">
+						<div class="card">
+							<div class="bl_img"><a href="blog_full.html"><img src="assets/images/news/B1.jpg" class="img-fluid" alt="thumb"></a></div>
+							<div class="bl_body">
+								<div class="bl_main">
+								    <span class="bl_title"><a href="blog_full.html">Power of AI will help you to solve these questions</a></span><br/>
+								    <p class="bl_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut....</p>
+								</div>
+							    <div class="bl_ftr d-flex justify-content-between align-items-center">
+									<a href="#" class="ln1 d-flex align-items-center">
+										<span class="lns1">
+											<img src="assets/images/news/user-thumbnail.svg" class="image-fluid rounded-circle usr_img" height="35" width="35" alt="user">
+										</span>
+										&nbsp;&nbsp;
+										<div class="lns2">
+											<span class="usr_name">Jake Knight</span>
+											<span class="usr_date">3 Jan 2020</span>
+										</div>	
+									</a>
+									<a href="#" class="ln2"><span class="usr_cmt"><i class="far fa-comment-dots"></i>&nbsp;&nbsp;2.3K</span></a>
+								</div>
+							</div>
+
+						</div>				
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 bl_sec mb-3">
+						<div class="card">
+							<div class="bl_img"><a href="blog_full.html"><img src="assets/images/news/B2.jpg" class="img-fluid" alt="thumb"></a></div>
+							<div class="bl_body">
+								<div class="bl_main">
+								    <span class="bl_title"><a href="blog_full.html">This modern SoC give you desktop like performance</a></span><br/>
+								    <p class="bl_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut....</p>  
+								</div>
+								<div class="bl_ftr d-flex justify-content-between align-items-center">
+									<a href="#" class="ln1 d-flex align-items-center">
+										<span class="lns1">
+											<img src="assets/images/news/user-thumbnail.svg" class="image-fluid rounded-circle usr_img" height="35" width="35" alt="user">
+										</span>
+										&nbsp;&nbsp;
+										<div class="lns2">
+											<span class="usr_name">Shreeram Jha</span>
+											<span class="usr_date">5 Jan 2020</span>
+										</div>	
+									</a>
+									<a href="#" class="ln2"><span class="usr_cmt"><i class="far fa-comment-dots"></i>&nbsp;&nbsp;3.1K</span></a>
+								</div>
+							    
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 bl_sec mb-3">
+						<div class="card">
+							<div class="bl_img"><a href="blog_full.html"><img src="assets/images/news/B3.jpg" class="img-fluid" alt="thumb"></a></div>
+							<div class="bl_body">
+								<div class="bl_main">
+								    <span class="bl_title"><a href="blog_full.html">Sustainablility has all environmental solutions</a></span><br/>
+								    <p class="bl_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt....</p>
+								</div>
+							    <div class="bl_ftr d-flex justify-content-between align-items-center">
+									<a href="#" class="ln1 d-flex align-items-center">
+										<span class="lns1">
+											<img src="assets/images/news/user-thumbnail.svg" class="image-fluid rounded-circle usr_img" height="35" width="35" alt="user">
+										</span>
+										&nbsp;&nbsp;
+										<div class="lns2">
+											<span class="usr_name">Shreeram Jha</span>
+											<span class="usr_date">3 Jan 2020</span>
+										</div>	
+									</a>
+									<a href="#" class="ln2"><span class="usr_cmt"><i class="far fa-comment-dots"></i>&nbsp;&nbsp;2.9K</span></a>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row"  >
+					<!-- <div class="col-lg-12 bl_full_ln">
+						Explore more company News, read more blogs & know about our thoughts in <a href="blog_full.html">News Page.</a>
+					</div> -->
+				</div>
+			</div>
+		</section>
+		<!--End News Section-->
+
+		<!--Start Contact Section-->
+		<section id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 cnt_head align-self-center">
+						<span class="sub_head">Feel free to contact us</span>
+						<h2 class="s_head">Contact Us</h2>
+						<p class="h_body">If you need to reach out, have questions about our services or have any technical difficulties, please do not hesitate to contact us.</p>
+						<div class="cntc_info d-flex flex-row flex-wrap">
+							<div class="cntc_info_e">
+								<div class="cntc_info_head"><span><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Address</span><br/></div>
+								<span class="cntc_info_b">Apatapity Layout, Federal University of Technology, Akure, Ng</span>
+							</div>
+							<div class="cntc_info_e">
+								<div class="cntc_info_head"><span><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;Phone</span><br/></div>
+								<span class="cntc_info_b">+234 8063746669</span><br/>
+								<span class="cntc_info_b">+234 8163669098</span>
+							</div>
+							<div class="cntc_info_e">
+								<div class="cntc_info_head"><span>Others</span><br/></div>
+								<!-- <span class="cntc_info_b"><i class="fas fa-globe"></i>&nbsp;&nbsp;info@onyetech.com </span><br/> -->
+								<span class="cntc_info_b"><i class="fas fa-envelope"></i>&nbsp;&nbsp;hello@talkpi.com <span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 cntc_form align-self-center" >
+						<form>
+							<div class="form-group">
+							    <label>Name</label>
+							    <input class="form-control" type="text" placeholder="Enter your name">
+							</div>
+							<div class="form-group">
+							    <label>Email</label>
+							    <input type="email" class="form-control" placeholder="Enter your e-mail">
+							</div>
+							<div class="form-group">
+							    <label>Message</label>
+							    <textarea class="form-control" placeholder="Enter text" rows="3"></textarea>
+							</div>
+							<button type="submit" class="button_main">Send</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--End Contact Section-->
+
+		<!--Start Footer-->
+		<footer id="footer">
+			<div class="container ftr_main">
+				<div class="row">
+					<!--Start Newsletter-->
+					<div class="col-lg-4 col-md-6 align-self-center">
+						<div class="ftr_brand">
+							<a href="#"><img src="assets/images/Onyetechlogo.png" height="40" alt="logo">TalkPi</a>
+						</div>
+						<div class="ftr_intro">
+							<p>Be the first to know the latest trend around Pi crypto World by subscribing to our newsletter!</p>
+						</div>
+						<div class="ftr_nwsltr">
+							<label>Newsletter</label>
+							<form action="#0">
+								<div class="form-group d-flex flex-wrap flex-row">
+								    <input type="email" class="p-2 mr-3" placeholder="Enter your Email">
+								    <button type="submit" class="btn btn_sub p-2">Subscribe</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!--End Newsletter-->
+
+					<!--Start Footer Objectives-->
+					<div class="col-lg-8 col-md-12 ftr_bdy align-self-center">
+						<div class="ftr_cnt ml-3 mr-3 d-flex flex-row justify-content-between flex-wrap">
+							<div class="ftr_clb"  >
+								<span class="ftr_clb_t1">Are you a crypo expert?</span><br/>
+								<span class="ftr_clb_t2">Lets have you work with us!</span><br/>
+								<a href="#" class="btn button_main">Submit an application!</a>
+						<!--		<div class="ftr_dsc mt-4">Made with <i class="fas fa-heart"></i> by <a href="http://codeonec.co">Codeonec</a></div> -->
+							</div>
+							<div class="ftr_lnk d-flex flex-column"  >
+								<div class="ftr_lnk_sc">
+									<a href="#"><i class="fab fa-twitter"></i></a>
+									<a href="#"><i class="fab fa-facebook-f"></i></a>
+									<a href="#"><i class="fab fa-instagram"></i></a>
+									<a href="#"><i class="fab fa-youtube"></i></a>
+									<a href="#"><i class="fab fa-dribbble"></i></a>
+								</div>
+								<div class="ftr_lnk_cmp mt-4 ml-auto">
+									<span class="ftr_lnk_head">Company</span><br/>
+									<span class="ftr_lnk_bdy"><a href="#">Case Studies</a></span><br/>
+									<span class="ftr_lnk_bdy"><a href="#">Career</a></span><br/>
+									<span class="ftr_lnk_bdy"><a href="#">Jobs</a></span>
+								</div>
+								<div class="ftr_lnk_lpt mt-auto ml-auto">
+									<span class="ftr_lnk_lpt_l"><a href="#">Privacy Policy</a></span><span class="ftr_lnk_lpt_dot">&nbsp;·&nbsp;</span><span class="ftr_lnk_lpt_l"><a href="#">Terms of use</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Start Footer Objectives-->
+				</div>
+			</div>
+
+			<!--Start Copyright-->
+			<section class="ftr_btm">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h6>2021 © <a href="https://talkpi.com/">OnyeTech Creative Hub</a>, All rights reserved.</h6>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--End Copyright-->
+		</footer>
+		<!--End Footer-->
+
+		<!-- JavaScript Files -->
+		<!-- Plugins JS(1.jQuery, 2.Popper, 3.Bootstrap, 4.FontAwesome, 6.Waypoints, 7.Owl Carousel) -->
+		<script src="assets/script/plugins.js"></script>
+		<!-- Main JS file -->
+		<script src="assets/script/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,6 @@
+myapp:
+  build: .
+  ports:
+    - "8081:8050"
+  extra_hosts:
+    - "dockerhost:$DOCKERHOST"

@@ -1,0 +1,49 @@
+server:
+
+  error:
+
+    include-message: always
+    include-binding-errors: always
+  port: 2022
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    password: password
+    url: jdbc:mysql://localhost:3306/onyetech
+    username: root
+#    url: jdbc:h2:mem:testdb
+#    driver-class-name: org.h2.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+#    database-platform: org.hibernate.dialect.H2Dialect
+
+  mail:
+    host: localhost
+    port: 1080
+    username: postgres
+    password: root
+
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: "*"
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+
