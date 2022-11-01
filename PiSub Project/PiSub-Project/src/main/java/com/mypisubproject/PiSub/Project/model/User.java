@@ -27,7 +27,7 @@ public class User {
     @Column(nullable = true, length = 30)
     private String lastName;
 
-    @Column(nullable = false, unique = true, length = 50)
+//    @Column(nullable = false, unique = true, length = 50)
     private String email;
 
     @Column(nullable = false, length = 100)
@@ -36,7 +36,7 @@ public class User {
     @Column(nullable = true, length = 100)
     private String phoneNumber;
 
-    @Column(nullable = true, length = 10)
+//    @Column(nullable = true, length = 10)
     private String userRole;
 
     @OneToOne(cascade = CascadeType.ALL)

@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
         Wallet wallet = new Wallet();
 
         user.setPassword(passwordEncode.encode(user.getPassword()));
-        user.setUserRole("USER");
+        user.setUserRole("ROLE_USER");
         user.setWallet(wallet);
 
         userRepo.save(user);

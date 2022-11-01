@@ -14,7 +14,6 @@ import java.security.Principal;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-
     @Autowired
     private UserRepository userRepo;
 
@@ -29,8 +28,7 @@ public class UserController {
 
     @GetMapping("/")
     public String home() {
-//        System.out.println("I got here");
+        System.out.println("I got here");
         return "/home";
-
     }
 }
