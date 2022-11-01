@@ -27,10 +27,9 @@ public class UserController {
         m.addAttribute("user", user);
     }
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String home() {
-
-        System.out.println("I got here");
+//        System.out.println("I got here");
         return "/home";
 
     }

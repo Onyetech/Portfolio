@@ -21,10 +21,10 @@ public class HomeController {
         return "index";
     }
 
-//    @GetMapping("/signin")
-//    public String login() {
-//        return "login";
-//    }
+    @GetMapping("/signin")
+    public String login() {
+        return "login";
+    }
 
     @GetMapping("/register")
     public String register() {
@@ -45,7 +45,7 @@ public class HomeController {
         else {
             User userDtls = userService.createUser(user);
             if (userDtls != null) {
-                session.setAttribute("msg", "Register Successfully");
+                session.setAttribute("msg", "Successful, proceed to login");
             } else {
                 session.setAttribute("msg", "Something wrong on server");
             }

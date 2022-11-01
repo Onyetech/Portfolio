@@ -38,21 +38,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.authenticationProvider(getDaoAuthProvider());
     }
 
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//
-//        http.authorizeRequests().antMatchers("/admin/**").hasRole("ADMIN").antMatchers("/user/**").hasRole("USER")
-//                .antMatchers("/**").permitAll().and().formLogin().loginPage("/signin").loginProcessingUrl("/user_login")
-//                .defaultSuccessUrl("/das/").and().csrf().disable();
-
-//    }
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests().antMatchers("/admin/**").hasRole("ADMIN").antMatchers("/user/**").hasRole("USER")
                 .antMatchers("/**").permitAll().and().formLogin().loginPage("/signin").loginProcessingUrl("/login")
-                .defaultSuccessUrl("/user/home").and().csrf().disable();
+                .defaultSuccessUrl("/user/").and().csrf().disable();
 
     }
 
