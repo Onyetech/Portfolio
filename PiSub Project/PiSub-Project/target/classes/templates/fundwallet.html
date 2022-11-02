@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fund Your Wallet</title>
+</head>
+<body>
+<form action="/fundwallet" method="post">
+  <h1>Fund Wallet</h1>
+
+  <h1>Email : [[${user.email}]]</h1>
+  <div class="mb-3">
+    <label>Enter Amount</label> <input type="text" name="amount"
+                                      class="form-control">
+  </div>
+
+  <button class="btn btn-primary col-md-12">Proceed</button>
+</form>
+</body>
+</html>

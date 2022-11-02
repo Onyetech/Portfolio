@@ -31,6 +31,16 @@ public class HomeController {
         return "register";
     }
 
+    @GetMapping("/fundwallet")
+    public String fundWallet(){
+        return "fundwallet";
+    }
+
+    @GetMapping("/pay_status")
+    public String payStatus(){
+        return "the_call_back_page";
+    }
+
     @PostMapping("/createUser")
     public String createUser(@ModelAttribute User user, HttpSession session) {
 

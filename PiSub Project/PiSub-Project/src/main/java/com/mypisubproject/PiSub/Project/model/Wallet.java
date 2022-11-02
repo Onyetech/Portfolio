@@ -22,7 +22,7 @@ public class Wallet {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "walletId", nullable = false)
-    private int walletId;
+    private Long id;
 
     private String walletAddress = UUID.randomUUID().toString();
 
