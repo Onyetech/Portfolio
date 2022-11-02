@@ -1,0 +1,95 @@
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.MediaType;
+
+    Client client = ClientBuilder.newClient();
+    Entity payload = Entity.json("{
+            \"recipientPhone\" : {
+            \"countryCode\" :\"HT\",
+            \"number\" :\"+50936377111\" //(Note the "+509" country dialing code for Haiti)
+},
+        \"senderPhone\" : {
+        \"countryCode\" : \"US\",
+        \"number\" : \"+13059547862\" //(Note the "+1" country dialing code for USA)
+        },
+        \"operatorId\" : 173 ,
+        \"amount\" :  15,
+        \"customIdentifier\" : \"transaction by john@example.com"
+        }");
+
+        Response response = client.target( "https://topups.reloadly.com/topups" )
+        .request (MediaType.APPLICATION_JSON_TYPE)
+        .header ("Accept", "application/com.reloadly.topups-v1+json" )
+        .header ("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik0wWXpRa" )
+        .post (payload);
+
+        System.out.println ("status: "  +  response. getStatus());
+        System.out.println ("headers: "  +  response. getHeaders());
+        System.out.println ("body: " +  response. readEntity( String.class ));
+
+        }
+
+
+{"transactionId":42428,"status":"SUCCESSFUL","operatorTransactionId":null,
+"customIdentifier":"airtim-top-up","recipientPhone":"971503971821",
+"recipientEmail":"jeanb@reloadly.com","senderPhone":"1231231231",
+"countryCode":"AE","operatorId":1100,"operatorName":"Etisalat United Arab Emirates",
+"discount":100,"discountCurrencyCode":"NGN","requestedAmount":2000,
+"requestedAmountCurrencyCode":"NGN","deliveredAmount":10.32,
+"deliveredAmountCurrencyCode":"AED","transactionDate":"2022-10-06 04:00:07",
+"pinDetail":null,"balanceInfo":{"oldBalance":410370.29900,"newBalance":408470.29900,
+"cost":1900.00000,"currencyCode":"NGN","currencyName":"Nigerian Naira","updatedAt":"2022-10-06 08:00:08"}}
+
+
+
+OkHttpClient client = new OkHttpClient().newBuilder()
+        .build();
+    MediaType mediaType = MediaType.parse("application/json");
+    RequestBody body = RequestBody.create(mediaType, "{
+	"operatorId":"685",
+	"amount":"10",
+	"customIdentifier": "This is example identifier 092",
+	"recipientPhone": {
+		"countryCode": "NG",
+		"number": "08147658721"
+	},
+	"senderPhone": {
+		"countryCode": "CA",
+		"number": "1231231231"
+	}
+}");
+    Request request = new Request.Builder()
+      .url("https://topups.reloadly.com/topups")
+      .method("POST", body)
+      .addHeader("Authorization", "Bearer YOUR_ACCESS_TOKEN_HERE")
+      .addHeader("Accept", "application/com.reloadly.topups-v1+json")
+      .addHeader("Content-Type", "application/json")
+      .build();
+    Response response = client.newCall(request).execute();
+
+
+
+{
+"transactionId":42681,"status":"SUCCESSFUL","operatorTransactionId":null,
+"customIdentifier":"0c083a58-dfff-4e7b-a699-2d747f4ad9c6","recipientPhone":"971503971821",
+"recipientEmail":"ikennajf@gmail.com","senderPhone":"1231231231","countryCode":"AE",
+"operatorId":1100,"operatorName":"Etisalat United Arab Emirates","discount":100,
+"discountCurrencyCode":"NGN","requestedAmount":2000,"requestedAmountCurrencyCode":"NGN",
+"deliveredAmount":10.32,"deliveredAmountCurrencyCode":"AED","transactionDate":"2022-10-09 11:27:32",
+"pinDetail":null,"balanceInfo":{"oldBalance":406570.29900,"newBalance":404670.29900,"cost":1900.00000,
+"currencyCode":"NGN","currencyName":"Nigerian Naira","updatedAt":"2022-10-09 15:27:32"}
+}
+
+
+
+     "recipientPhone":{
+         "countryCode": "AE",
+         "number": "0503971821"
+      },
+     "senderPhone":{
+         "countryCode": "CA",
+         "number": "11231231231"
+     }
+
