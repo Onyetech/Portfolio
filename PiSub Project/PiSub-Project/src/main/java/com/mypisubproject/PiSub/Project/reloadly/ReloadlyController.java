@@ -1,4 +1,4 @@
-package com.example.akpaego.reloadly;
+package com.mypisubproject.PiSub.Project.reloadly;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

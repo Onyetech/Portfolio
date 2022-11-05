@@ -26,6 +26,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -94,6 +95,8 @@ public class PaystackService {
 
             logger.info("===== executed the post request for transaction initialization =====");
             logger.error("=== please confirm the transaction status =====");
+            int statusCode = response.getStatusLine().getStatusCode();
+            System.out.println("The status code is " + statusCode);
 
 
             if (response.getStatusLine().getStatusCode() == 200) {
@@ -103,6 +106,7 @@ public class PaystackService {
                 String line;
                 while ((line = rd.readLine()) != null) {
                     result.append(line);
+                    System.out.println("I am printing this line " + line);
                 }
 
             } else {
@@ -193,7 +197,7 @@ public class PaystackService {
                     logger.info("saved successful transactions, ref = ......... {} ", transaction.getTransRef());
 
 
-                Optional<Wallet> wallet = walletRepository.findById(Math.toIntExact(transaction.getUser().getWallet().getId()));
+                Optional<Wallet> wallet = walletRepository.findById(transaction.getUser().getWallet().getId());
                 if (wallet.isPresent()){
                     wallet.get().setBalance(wallet.get().getBalance().add(transaction.getAmount()));
                     walletRepository.save(wallet.get());

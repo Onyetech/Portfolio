@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      th:replace="base::layout(~{::section})">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Call back</title>
 </head>
 <body>
 <h1>The call back page</h1>
+<h1>Wallet balance : [[${user.wallet.balance}]]</h1>
 <h5>Thank you for funding</h5>
 <li class="nav-item"><a class="nav-link" href="index">Return home</a></li>
 

@@ -5,14 +5,17 @@
     <title>Fund Your Wallet</title>
 </head>
 <body>
-<form action="/fundwallet" method="post">
-  <h1>Fund Wallet</h1>
+<!--<form th:action="@{/user/pay_with_paystack}" th:object="${payment}" method="post">-->
+    <form action="/user/pay_with_paystack" method="post">
+
+    <h1>Fund Wallet</h1>
 
   <h1>Email : [[${user.email}]]</h1>
   <div class="mb-3">
     <label>Enter Amount</label> <input type="text" name="amount"
-                                      class="form-control">
+                                           class="form-control">
   </div>
+    <input type="hidden" name="email" th:field="*{user.email}" class="form-control" placeholder="Enter Email"/>
 
   <button class="btn btn-primary col-md-12">Proceed</button>
 </form>

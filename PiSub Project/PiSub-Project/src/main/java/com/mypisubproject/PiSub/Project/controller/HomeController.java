@@ -30,12 +30,6 @@ public class HomeController {
     public String register() {
         return "register";
     }
-
-    @GetMapping("/fundwallet")
-    public String fundWallet(){
-        return "fundwallet";
-    }
-
     @GetMapping("/pay_status")
     public String payStatus(){
         return "the_call_back_page";
@@ -44,12 +38,13 @@ public class HomeController {
     @PostMapping("/createUser")
     public String createUser(@ModelAttribute User user, HttpSession session) {
 
-        // System.out.println(user);
+        System.out.println(user);
 
-        boolean f = userService.checkEmail(user.getEmail());
+        boolean e = userService.checkEmail(user.getEmail());
+        boolean n = userService.checkUniqueName(user.getUniqueName());
 
-        if (f) {
-            session.setAttribute("msg", "Email Id already exists");
+        if (e || n) {
+            session.setAttribute("msg", "Email ID or Unique name already exists");
         }
 
         else {
