@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class RechargeDataEntity {
+public class DataTopUpEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "serial_no", nullable = false)
@@ -27,7 +27,7 @@ public class RechargeDataEntity {
     private double balance_before;
     private double balance_after;
     private String mobile_number;
-    private String Status;
+    private String status;
     private LocalDateTime create_date = LocalDateTime.now();
     private boolean Ported_number = true;
 

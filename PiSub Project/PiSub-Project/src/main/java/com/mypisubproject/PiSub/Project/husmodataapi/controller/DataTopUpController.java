@@ -16,15 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/data")
-public class RechargeDataController {
+public class DataTopUpController {
 
-    private static final Logger logger = LoggerFactory.getLogger(RechargeDataController.class);
+    private static final Logger logger = LoggerFactory.getLogger(DataTopUpController.class);
 
     private final GeAllDataPlans getDataPlans;
-//    private final RechargeDataService rechargeDataService;
     private final DataTopUpService rechargeDataService;
 
-    public RechargeDataController(GeAllDataPlans getDataPlans, DataTopUpService rechargeDataService) {
+    public DataTopUpController(GeAllDataPlans getDataPlans, DataTopUpService rechargeDataService) {
         this.getDataPlans = getDataPlans;
         this.rechargeDataService = rechargeDataService;
     }
