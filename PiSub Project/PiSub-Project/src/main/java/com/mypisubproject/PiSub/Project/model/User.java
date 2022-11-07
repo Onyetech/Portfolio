@@ -16,7 +16,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "userId", nullable = false)
-    private int UserId;
+    private int id;
 
     @Column(nullable = false, unique = true, length = 30)
     private String uniqueName;

@@ -61,10 +61,11 @@ public class UserServiceImpl implements UserService {
     public User updateUserDetails(User user, @ModelAttribute UpdateUserDto updateUser) {
         user.setPassword(passwordEncode.encode(user.getPassword()));
 
-//            user.setEmail(updateUser.getEmail());
-//            user.setFirstName(updateUser.getFirstName());
-//            user.setLastName(updateUser.getLastName());
-//            user.setPhoneNumber(updateUser.getPhoneNumber());
+
+            user.setEmail(updateUser.getEmail());
+            user.setFirstName(updateUser.getFirstName());
+            user.setLastName(updateUser.getLastName());
+            user.setPhoneNumber(updateUser.getPhoneNumber());
 
             userRepo.save(user);
 

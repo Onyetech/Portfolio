@@ -2,6 +2,7 @@ package com.mypisubproject.PiSub.Project.reloadly;
 
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -13,7 +14,7 @@ import java.util.UUID;
 @NoArgsConstructor
 public class AirtimeTopUpRequest {
     private Long operatorId;
-    private double amount;
+    private BigDecimal amount;
     private boolean useLocalAmount;
     private UUID customIdentifier = UUID.randomUUID();
     private String recipientEmail;
